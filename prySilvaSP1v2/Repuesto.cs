@@ -8,6 +8,11 @@ namespace prySilvaSP1v2
 {
     public class Repuesto
     {
-
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string Marca { get; set; }
+        public decimal Precio { get; set; }
+        public string Origen { get; set; }
+        
     }
 }
