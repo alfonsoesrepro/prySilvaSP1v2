@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRepuestos));
             this.gbRepuestos = new System.Windows.Forms.GroupBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblMarca = new System.Windows.Forms.Label();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.optImportado = new System.Windows.Forms.RadioButton();
             this.lblOrigen = new System.Windows.Forms.Label();
             this.optNacional = new System.Windows.Forms.RadioButton();
-            this.optImportado = new System.Windows.Forms.RadioButton();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.cmdAceptar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdConsultar = new System.Windows.Forms.Button();
@@ -67,73 +68,16 @@
             this.gbRepuestos.TabStop = false;
             this.gbRepuestos.Text = "Repuestos";
             // 
-            // lblCodigo
+            // optImportado
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(24, 37);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Código";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo.Location = new System.Drawing.Point(121, 34);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(84, 20);
-            this.txtCodigo.TabIndex = 1;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(24, 81);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Location = new System.Drawing.Point(121, 74);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(183, 20);
-            this.txtNombre.TabIndex = 3;
-            // 
-            // lblMarca
-            // 
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(24, 127);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(37, 13);
-            this.lblMarca.TabIndex = 4;
-            this.lblMarca.Text = "Marca";
-            // 
-            // cmbMarca
-            // 
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(121, 119);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(183, 21);
-            this.cmbMarca.TabIndex = 5;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(24, 171);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
-            this.lblPrecio.TabIndex = 6;
-            this.lblPrecio.Text = "Precio";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecio.Location = new System.Drawing.Point(121, 164);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(84, 20);
-            this.txtPrecio.TabIndex = 7;
+            this.optImportado.AutoSize = true;
+            this.optImportado.Location = new System.Drawing.Point(209, 211);
+            this.optImportado.Name = "optImportado";
+            this.optImportado.Size = new System.Drawing.Size(72, 17);
+            this.optImportado.TabIndex = 10;
+            this.optImportado.TabStop = true;
+            this.optImportado.Text = "Importado";
+            this.optImportado.UseVisualStyleBackColor = true;
             // 
             // lblOrigen
             // 
@@ -155,16 +99,74 @@
             this.optNacional.Text = "Nacional";
             this.optNacional.UseVisualStyleBackColor = true;
             // 
-            // optImportado
+            // txtPrecio
             // 
-            this.optImportado.AutoSize = true;
-            this.optImportado.Location = new System.Drawing.Point(209, 211);
-            this.optImportado.Name = "optImportado";
-            this.optImportado.Size = new System.Drawing.Size(72, 17);
-            this.optImportado.TabIndex = 10;
-            this.optImportado.TabStop = true;
-            this.optImportado.Text = "Importado";
-            this.optImportado.UseVisualStyleBackColor = true;
+            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrecio.Location = new System.Drawing.Point(121, 164);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(84, 20);
+            this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(24, 171);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.TabIndex = 6;
+            this.lblPrecio.Text = "Precio";
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(121, 119);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(183, 21);
+            this.cmbMarca.TabIndex = 5;
+            // 
+            // lblMarca
+            // 
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Location = new System.Drawing.Point(24, 127);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(37, 13);
+            this.lblMarca.TabIndex = 4;
+            this.lblMarca.Text = "Marca";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Location = new System.Drawing.Point(121, 74);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(183, 20);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(24, 81);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodigo.Location = new System.Drawing.Point(121, 34);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(84, 20);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(24, 37);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Código";
             // 
             // cmdAceptar
             // 
@@ -174,6 +176,7 @@
             this.cmdAceptar.TabIndex = 1;
             this.cmdAceptar.Text = "&Aceptar";
             this.cmdAceptar.UseVisualStyleBackColor = true;
+            this.cmdAceptar.Click += new System.EventHandler(this.cmdAceptar_Click);
             // 
             // cmdCancelar
             // 
@@ -183,6 +186,7 @@
             this.cmdCancelar.TabIndex = 2;
             this.cmdCancelar.Text = "&Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // cmdConsultar
             // 
@@ -192,6 +196,7 @@
             this.cmdConsultar.TabIndex = 3;
             this.cmdConsultar.Text = "&Consultar";
             this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
             // 
             // cmdSalir
             // 
@@ -201,6 +206,7 @@
             this.cmdSalir.TabIndex = 4;
             this.cmdSalir.Text = "&Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // frmRepuestos
             // 
@@ -212,8 +218,11 @@
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdAceptar);
             this.Controls.Add(this.gbRepuestos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRepuestos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AUTOCOR - Repuestos";
+            this.Load += new System.EventHandler(this.frmRepuestos_Load);
             this.gbRepuestos.ResumeLayout(false);
             this.gbRepuestos.PerformLayout();
             this.ResumeLayout(false);
