@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsulta));
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.lblMarca = new System.Windows.Forms.Label();
             this.optImportado = new System.Windows.Forms.RadioButton();
@@ -116,6 +117,7 @@
             this.cmdSalir.TabIndex = 16;
             this.cmdSalir.Text = "&Salir";
             this.cmdSalir.UseVisualStyleBackColor = true;
+            this.cmdSalir.Click += new System.EventHandler(this.cmdSalir_Click);
             // 
             // cmdConsultar
             // 
@@ -125,9 +127,11 @@
             this.cmdConsultar.TabIndex = 15;
             this.cmdConsultar.Text = "&Consultar";
             this.cmdConsultar.UseVisualStyleBackColor = true;
+            this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
             // 
             // dgvConsulta
             // 
+            this.dgvConsulta.AllowUserToAddRows = false;
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCodigo,
@@ -137,6 +141,7 @@
             this.clmPrecio});
             this.dgvConsulta.Location = new System.Drawing.Point(25, 161);
             this.dgvConsulta.Name = "dgvConsulta";
+            this.dgvConsulta.ReadOnly = true;
             this.dgvConsulta.RowHeadersVisible = false;
             this.dgvConsulta.Size = new System.Drawing.Size(502, 211);
             this.dgvConsulta.TabIndex = 17;
@@ -145,26 +150,31 @@
             // 
             this.clmCodigo.HeaderText = "Código";
             this.clmCodigo.Name = "clmCodigo";
+            this.clmCodigo.ReadOnly = true;
             // 
             // clmNombre
             // 
             this.clmNombre.HeaderText = "Nombre";
             this.clmNombre.Name = "clmNombre";
+            this.clmNombre.ReadOnly = true;
             // 
             // clmMarca
             // 
             this.clmMarca.HeaderText = "Marca";
             this.clmMarca.Name = "clmMarca";
+            this.clmMarca.ReadOnly = true;
             // 
             // clmOrigen
             // 
             this.clmOrigen.HeaderText = "Origen";
             this.clmOrigen.Name = "clmOrigen";
+            this.clmOrigen.ReadOnly = true;
             // 
             // clmPrecio
             // 
             this.clmPrecio.HeaderText = "Precio";
             this.clmPrecio.Name = "clmPrecio";
+            this.clmPrecio.ReadOnly = true;
             // 
             // frmConsulta
             // 
@@ -177,8 +187,11 @@
             this.Controls.Add(this.gbOrigen);
             this.Controls.Add(this.cmbMarca);
             this.Controls.Add(this.lblMarca);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsulta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AUTOCOR - Consulta";
+            this.Load += new System.EventHandler(this.frmConsulta_Load);
             this.gbOrigen.ResumeLayout(false);
             this.gbOrigen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
